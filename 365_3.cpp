@@ -1,10 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int a,b;
-    float c,d,e,f;
+    float a,b,c,d,e,f;
     printf("\n\t Enter the $:");
-    scanf("%d",&a);
+    scanf("%f",&a);
     b=a*48;
     printf("\n\t Rs.%d",b);
     printf("\n\t Enter the Rs.:");
