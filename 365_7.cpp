@@ -9,6 +9,6 @@ int main()
     printf("\n\tEnter the N(Duration or number of time periods):");
     scanf("%f",&n);
     i=(p*r*n)/100;
-    printf("Now interst is %f",i);
+    printf("\n\tNow interst is %f",i);
     return 0;
 }
