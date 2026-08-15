@@ -10,4 +10,5 @@ int main()
     scanf("%f",&n);
     i=(p*r*n)/100;
     printf("Now interst is %f",i);
+    return 0;
 }
