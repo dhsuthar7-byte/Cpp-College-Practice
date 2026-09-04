@@ -6,8 +6,19 @@ int main()
     for(number=2;number<=500;number++)
     {
         count=0;
-        for(i=1;i<=number;i++) if(number%i==0) count++;
-        if(count==2){ printf("%d ",number); sum=sum+number; total++; }
+        for(i=1;i<=number;i++)
+        {
+            if(number%i==0)
+            {
+                count++;
+            }
+        }
+        if(count==2)
+        {
+            printf("%d ",number);
+            sum=sum+number;
+            total++;
+        }
     }
     printf("\nSum = %d\nNumber of primes = %d\n",sum,total);
     return 0;

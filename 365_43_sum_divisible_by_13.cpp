@@ -2,7 +2,9 @@
 int main()
 {
     int i,sum=0;
-    for(i=1;i<=100;i++) if(i%13==0) sum=sum+i;
+    for(i=1;i<=100;i++) if(i%13==0) 
+        sum=sum+i;
+    
     printf("Sum = %d\n",sum);
     return 0;
 }
