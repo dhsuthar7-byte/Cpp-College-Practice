@@ -1,3 +1,37 @@
-#include <stdio.h>
-typedef struct {int roll;char name[50],course[50],major[50],minor[50];} Student;
-int main(void){Student s[10];int i,n,roll;printf("Number of students (max 10): ");scanf("%d",&n);for(i=0;i<n;i++){printf("Roll name course major minor: ");scanf("%d %49s %49s %49s %49s",&s[i].roll,s[i].name,s[i].course,s[i].major,s[i].minor);}puts("Student names:");for(i=0;i<n;i++)puts(s[i].name);printf("Roll number to find: ");scanf("%d",&roll);for(i=0;i<n&&s[i].roll!=roll;i++);if(i<n)printf("%d %s %s %s %s",s[i].roll,s[i].name,s[i].course,s[i].major,s[i].minor);else puts("Student not found");return 0;}
+#include<stdio.h>
+
+struct student
+{
+    int roll;
+    char name[50];
+    char course[50];
+    char major[50];
+    char minor[50];
+};
+
+int main()
+{
+    struct student student[10];
+    int number,i,roll;
+
+    printf("Enter number of students: ");
+    scanf("%d",&number);
+    for(i=0;i<number;i++)
+    {
+        printf("Enter roll number, name, course, major and minor: ");
+        scanf("%d%s%s%s%s",&student[i].roll,student[i].name,student[i].course,student[i].major,student[i].minor);
+    }
+    printf("Student names:\n");
+    for(i=0;i<number;i++)
+        printf("%s\n",student[i].name);
+    printf("Enter roll number to search: ");
+    scanf("%d",&roll);
+    for(i=0;i<number;i++)
+        if(student[i].roll==roll)
+            break;
+    if(i<number)
+        printf("%d %s %s %s %s\n",student[i].roll,student[i].name,student[i].course,student[i].major,student[i].minor);
+    else
+        printf("Student not found\n");
+    return 0;
+}

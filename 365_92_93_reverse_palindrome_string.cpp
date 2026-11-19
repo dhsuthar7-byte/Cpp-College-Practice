@@ -5,7 +5,7 @@ int main()
     char string[100],reverse[100],temp;
     int i;
     printf("Enter a string: ");
-    scanf(" %99[^\n]",string);
+    scanf("%s",string);
     strcpy(reverse,string);
     for(i=0;i<(int)strlen(reverse)/2;i++)
     {

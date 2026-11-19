@@ -5,7 +5,7 @@ int main()
     char string[100];
     int i;
     printf("Enter a string: ");
-    scanf(" %99[^\n]",string);
+    scanf("%s",string);
     printf("Characters vertically:\n");
     for(i=0;string[i]!='\0';i++) printf("%c\n",string[i]);
     printf("Reverse characters vertically:\n");

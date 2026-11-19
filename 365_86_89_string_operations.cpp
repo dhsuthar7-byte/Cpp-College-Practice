@@ -6,7 +6,7 @@ int main()
     char string[100],lower[100],upper[100],toggle[100];
     int i;
     printf("Enter a string: ");
-    scanf(" %99[^\n]",string);
+    scanf("%s",string);
     printf("Length = %d\n",(int)strlen(string));
     strcpy(lower,string);
     strcpy(upper,string);

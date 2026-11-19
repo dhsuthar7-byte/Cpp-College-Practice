@@ -5,7 +5,7 @@ int main()
     char string[100];
     int i,a=0,e=0,ii=0,o=0,u=0;
     printf("Enter a string: ");
-    scanf(" %99[^\n]",string);
+    scanf("%s",string);
     for(i=0;string[i]!='\0';i++)
     {
         if(tolower(string[i])=='a') a++;
