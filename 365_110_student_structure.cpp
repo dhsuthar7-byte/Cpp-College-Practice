@@ -1,0 +1,3 @@
+#include <stdio.h>
+typedef struct {int roll;char name[50],course[50],major[50],minor[50];} Student;
+int main(void){Student s[10];int i,n,roll;printf("Number of students (max 10): ");scanf("%d",&n);for(i=0;i<n;i++){printf("Roll name course major minor: ");scanf("%d %49s %49s %49s %49s",&s[i].roll,s[i].name,s[i].course,s[i].major,s[i].minor);}puts("Student names:");for(i=0;i<n;i++)puts(s[i].name);printf("Roll number to find: ");scanf("%d",&roll);for(i=0;i<n&&s[i].roll!=roll;i++);if(i<n)printf("%d %s %s %s %s",s[i].roll,s[i].name,s[i].course,s[i].major,s[i].minor);else puts("Student not found");return 0;}

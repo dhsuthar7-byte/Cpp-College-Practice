@@ -1,0 +1,3 @@
+#include <stdio.h>
+typedef struct {long account;char name[50];float balance;} Customer;
+int main(void){Customer c[10];int n,i,code;long no;float amount;printf("Customers (max 10): ");scanf("%d",&n);for(i=0;i<n;i++)scanf("%ld %49s %f",&c[i].account,c[i].name,&c[i].balance);puts("Balances below Rs. 100:");for(i=0;i<n;i++)if(c[i].balance<100)printf("%ld %s\n",c[i].account,c[i].name);printf("Account amount code (1 deposit, 0 withdrawal): ");scanf("%ld%f%d",&no,&amount,&code);for(i=0;i<n&&c[i].account!=no;i++);if(i==n)puts("Account not found");else if(code)c[i].balance+=amount;else if(amount>c[i].balance)puts("The balance is insufficient for the specified withdrawal");else c[i].balance-=amount;if(i<n)printf("Balance = %.2f",c[i].balance);return 0;}
