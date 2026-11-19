@@ -12,7 +12,7 @@ int main()
     printf("Average = %.2f\n",average);
 
     if (sub1<35 || sub2<35 || sub3<35)
-        printf("Result: Fail (secured less than 35 in a subject)\n");
+        printf("Result: Fail (scored less than 35 in a subject)\n");
 
     else if (average>=70)
         printf("Result: Distinction\n");
