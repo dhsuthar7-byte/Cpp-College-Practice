@@ -14,7 +14,7 @@ int main()
         printf("Largest = %.2f\n",b);
         printf("Smallest = %.2f\n",a);
     }                                //Largest=(a>b)?a:b;
-                                     //Smallest=(a<b)?b:a;
+                                     //Smallest=(a<b)?a:b;
     else
     {
         printf("Both values are equal: %.2f\n",a);
